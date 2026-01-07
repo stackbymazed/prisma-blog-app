@@ -3,16 +3,16 @@ import { prisma } from "../../lib/prisma";
 
 
 const CreatePostService = async (data: Omit<Post, "id" | "createdAt" | "updatedAt">) => {
-    console.log(data);
+    // console.log(data);
     try {
         const result = await prisma.post.create({
             data
         })
-        console.log(result);
+        // console.log(result);
         return result;
     } catch (err) {
         return err
-    }
+    } 
 }
 
 
