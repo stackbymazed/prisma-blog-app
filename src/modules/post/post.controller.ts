@@ -3,12 +3,8 @@ import { PostService } from "./post.service";
 
 const CreatePost = async (req: Request, res: Response) => {
     try {
-        const result =  PostService.CreatePostService(req.body);
-        res.status(200).json({
-            success: true,
-            message: "Users created successfully",
-            data: result
-        })
+        const result =await  PostService.CreatePostService(req.body);
+        res.status(201).json(result)
 
     } catch (err: any) {
         res.status(404).json({
@@ -21,3 +17,13 @@ const CreatePost = async (req: Request, res: Response) => {
 export const PostController = {
     CreatePost
 }
+
+
+
+
+
+
+
+
+
+
