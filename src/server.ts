@@ -1,6 +1,8 @@
 import app from "./app";
 import { prisma } from "./lib/prisma"
 import "dotenv/config";
+// console.log("DB URL =", process.env.DATABASE_URL);
+
 
 
 const port = process.env.PORT || 3000
