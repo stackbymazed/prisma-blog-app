@@ -7,11 +7,6 @@ import "dotenv/config";
 const app = express()
 app.use(express.json())
 
-const Auth = () => {
-    async (req:Request, res:Response, next:NextFunction) => {
-        
-    }
-}
 
 //better auth authentication route
 app.all("/api/auth/*splat", toNodeHandler(auth));
